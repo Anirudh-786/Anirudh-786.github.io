@@ -1,14 +1,14 @@
 /* Professional, responsive, no frameworks */
 :root{
-  --bg:#ffffff;       /* page background */
-  --card:#f5f5f5;     /* card background */
-  --ink:#333333;      /* main text color */
-  --muted:#666666;    /* muted text */
-  --brand:#0077cc;    /* primary accent color */
+  --bg:#ffffff;        /* background white */
+  --card:#f5f5f5;      /* card background */
+  --ink:#000000;       /* main text black */
+  --muted:#333333;     /* muted text dark grey */
+  --brand:#0077cc;     /* accent color */
   --brand-ink:#ffffff;
-  --line:#dddddd;     /* border lines */
-  --chip:#e0e0e0;     /* skill chips background */
-  --shadow:0 4px 15px rgba(0,0,0,.15);
+  --line:#cccccc;      /* light border */
+  --chip:#e0e0e0;      /* skill chip background */
+  --shadow:0 4px 15px rgba(0,0,0,.1);
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
