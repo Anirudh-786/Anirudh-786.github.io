@@ -1,0 +1,106 @@
+/* Light Theme CSS for Portfolio */
+
+:root{
+  --bg:#ffffff;        /* White background */
+  --card:#f9f9f9;      /* Light card background */
+  --ink:#000000;       /* Main text black */
+  --muted:#333333;     /* Muted text dark grey */
+  --brand:#0077cc;     /* Accent color */
+  --brand-ink:#ffffff; /* Text color on brand buttons */
+  --line:#cccccc;      /* Borders */
+  --chip:#e0e0e0;      /* Skill chips */
+  --shadow:0 4px 15px rgba(0,0,0,.1);
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  color:var(--ink);
+  background: var(--bg);
+  line-height:1.6;
+}
+.container{max-width:1080px;margin:0 auto;padding:0 20px}
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* Header */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background: var(--bg);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0;color:var(--ink)}
+.brand{display:flex;gap:14px;align-items:center;color:var(--ink)}
+.avatar{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#60a5fa,#a78bfa);color:white;font-weight:700}
+.title{margin:0;font-size:20px;color:var(--ink)}
+.subtitle{margin:2px 0 0 0;color:var(--muted);font-size:13px}
+.nav{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.nav a{padding:8px 10px;border-radius:8px;color:var(--ink)}
+.nav .btn-primary{background:var(--brand);color:var(--brand-ink);box-shadow:var(--shadow)}
+
+/* Sections */
+.section{padding:64px 0}
+.section.alt{background:#fdfdfd}
+h2{margin:0 0 16px 0;font-size:28px;color:var(--ink)}
+.lead{font-size:18px;color:var(--ink)}
+
+/* Cards and grids */
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:18px;
+  box-shadow:var(--shadow);
+  color:var(--ink);
+}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.grid-2{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:start}
+.quick-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+.stat{display:grid;gap:6px;text-align:center}
+.stat-num{font-size:28px;font-weight:800;color:var(--ink)}
+.stat-label{color:var(--muted);font-size:12px}
+.highlight h3{margin-top:0}
+.checklist{margin:0 0 12px 0;padding-left:18px;color:var(--ink)}
+.checklist li{margin:6px 0}
+
+/* Timeline */
+.timeline{position:relative;margin-top:12px;padding-left:0}
+.t-item{position:relative;margin:18px 0}
+.t-content h3{margin:0 0 6px 0;font-size:18px;color:var(--ink)}
+.t-content h3 span{font-weight:400;color:var(--muted);font-size:14px;margin-left:8px}
+.t-content p{color:var(--ink)}
+
+/* Skills */
+.chipset{display:flex;flex-wrap:wrap;gap:10px}
+.chip{background:var(--chip);border:1px solid var(--line);padding:8px 12px;border-radius:999px;color:var(--ink)}
+
+/* Projects */
+.project h3{margin:0 0 6px 0;color:var(--ink)}
+.actions{display:flex;gap:10px;margin-top:10px}
+.btn{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid transparent;background:#e0e0e0;color:var(--ink);text-decoration:none}
+.btn:hover{filter:brightness(1.05)}
+.btn-outline{background:transparent;border-color:#ccc}
+.btn-primary{background:var(--brand);color:var(--brand-ink);border-color:transparent}
+.btn-sm{padding:8px 12px;font-size:14px}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.card h3, .card p, .card a{color:var(--ink)}
+
+/* Footer */
+.site-footer{border-top:1px solid var(--line);padding:20px 0;color:var(--muted);background:var(--bg)}
+
+/* Responsive */
+@media (max-width: 900px){
+  .grid-2{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr}
+  .quick-cards{grid-template-columns:repeat(3,1fr)}
+  .contact-grid{grid-template-columns:1fr}
+  .nav{gap:8px}
+}
+@media (max-width: 520px){
+  .quick-cards{grid-template-columns:repeat(2,1fr)}
+  h2{font-size:24px}
+  .title{font-size:18px}
+}
